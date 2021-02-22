@@ -1,0 +1,26 @@
+From 10ffa30e21e94801c444704362342610e49034ab Mon Sep 17 00:00:00 2001
+From: Erich E<redacted>
+Date: Sun, 21 Feb 2021 01:12:04 +0100
+Subject: [PATCH] doas privilige escalation in makepkg
+
+Signed-off-by: Erich E<redacted>
+---
+ scripts/makepkg.sh.in | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/scripts/makepkg.sh.in b/scripts/makepkg.sh.in
+index b39433f3..47b3001d 100644
+--- a/scripts/makepkg.sh.in
++++ b/scripts/makepkg.sh.in
+@@ -232,6 +232,8 @@ run_pacman() {
+ 		cmd=("$PACMAN_PATH" "${PACMAN_OPTS[@]}" "$@")
+ 		if type -p sudo >/dev/null; then
+ 			cmd=(sudo "${cmd[@]}")
++		elif type -p doas >/dev/null; then
++			cmd=(doas "${cmd[@]}")
+ 		else
+ 			cmd=(su root -c "$(printf '%q ' "${cmd[@]}")")
+ 		fi
+-- 
+2.30.1
+
