@@ -1,0 +1,26 @@
+From c1a6350c88d7b7307b2790aefe0d0bb60cffb50e Mon Sep 17 00:00:00 2001
+From: DaERich <daerich@REDACTED>
+Date: Sat, 22 May 2021 14:12:27 +0200
+Subject: [PATCH] Clarified list synatax and capabilities
+
+Signed-off-by: DaERich <daerich@REDACTED>
+---
+ mksh.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/mksh.1 b/mksh.1
+index 3daa139..16380f8 100644
+--- a/mksh.1
++++ b/mksh.1
+@@ -590,7 +590,7 @@ complemented: if the original status was 0, the complemented status will be 1;
+ if the original status was not 0, the complemented status will be 0.
+ .Pp
+ .Em Lists
+-of commands can be created by separating pipelines by any of the following
++of commands can be created by separating pipelines and/or simple commands by any of the following
+ tokens:
+ .Dq Li && ,
+ .Dq Li \*(Ba\*(Ba ,
+-- 
+2.31.1
+
