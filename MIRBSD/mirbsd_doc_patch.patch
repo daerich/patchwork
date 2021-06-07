@@ -1,0 +1,35 @@
+From 7cf61e5e7e7d187b9bee523964e0eacfab374834 Mon Sep 17 00:00:00 2001
+From: DaERich <daerich@REDACTED>
+Date: Mon, 7 Jun 2021 15:54:45 +0200
+Subject: [PATCH] attempt to make documentation more coherent
+
+Signed-off-by: DaERich <daerich@REDACTED>
+---
+ mksh.1 | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/mksh.1 b/mksh.1
+index 6cfb70c..c0479ec 100644
+--- a/mksh.1
++++ b/mksh.1
+@@ -589,7 +589,7 @@ complemented: if the original status was 0, the complemented status will be 1;
+ if the original status was not 0, the complemented status will be 0.
+ .Pp
+ .Em Lists
+-of commands can be created by separating pipelines by any of the following
++of commands can be created by separating pipelines and/or commands by any of the following
+ tokens:
+ .Dq Li && ,
+ .Dq Li \*(Ba\*(Ba ,
+@@ -664,7 +664,7 @@ or
+ The exit status of a list is that of the last command executed, with the
+ exception of asynchronous lists, for which the exit status is 0.
+ .Pp
+-Compound commands are created using the following reserved words.
++Compound-commands are created using the following reserved words.
+ These words
+ are only recognised if they are unquoted and if they are used as the first
+ word of a command (i.e. they can't be preceded by parameter assignments or
+-- 
+2.32.0
+
